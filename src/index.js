@@ -9,6 +9,7 @@ import Inicio from "./routes/Inicio.jsx";
 import Blog from "./routes/Blog.jsx";
 import Contacto from "./routes/Contacto.jsx";
 import NoEncontrada from "./routes/NoEncontrada.jsx";
+import Post from "./routes/Post.jsx";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -17,6 +18,7 @@ root.render(
       <Route path="/" element={<App />}>
         <Route index element={<Inicio />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/blog/:id" element={<Post />} />
         <Route path="/contacto" element={<Contacto />} />
         <Route path="*" element={<NoEncontrada />} />
       </Route>
